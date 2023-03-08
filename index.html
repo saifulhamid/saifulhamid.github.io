@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-light navbar-expand-xl">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img class="d-line-brand mb-0" src="data:image/png;base64,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" alt="" height="70px"></a>
+          <button 
+          class="navbar-toggler border-0 ml-auto" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#navbarNav" 
+          aria-controls="navbarNav" 
+          aria-expanded="false" 
+          aria-label="toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link active" aria-current="page" href="#">Explore</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Support</a>
+              </li>
+            </ul>
+          
+           <div class="ms-auto me-1 d-grid d-md-block gap-2 mb-3 mb-md-0">
+            <form class="d-flex" roll="search">
+              <div class="input-group me-3" style="border: 1px solid grey;">
+                <input type="search" class="form=control form-control-sm border-0" placeholder="Search HP.com">
+                <button class="btn btn-sm btn-light">
+                  <img src="search.svg" alt="">
+                </button>
+              </div>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3 me-3" viewBox="0 0 16 16">
+                  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
+              </div>
+              <div>
+                <button type="button" class="btn btn-dark me-1 " style="border-radius: 0;padding: 5px;width: 80px;">Sign in</button>
+              </div>
+            </form>
+           </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+    <main>
+      <div class="container">
+        <div style="height:max-content;" class="row">
+          <div class=" col- col-lg-8 col-md-12 col-xl-8 container-lg col-sm-12 gx-0" >
+            <img src="Tablet_Image@1x.jpeg" alt="" class="imgg object-fit-fill h-100">
+          </div>
+       
+        <div  class=" col- col-lg-4 col-md-12 col-xl-4 col-xxl container-lg col-sm-12 gx-4">
+          <div class="bg-info row float-end px-4">
+            <h1>
+              The new HP <br> Smart Tank <br> Printers
+            </h1>
+            <br>
+            <h5>
+              Consider it done.
+            </h5>
+            <br><br>
+            <hr>
+            <ul>
+              <li>Free 1+1 year extended warranty</li>
+              <li>Free  year subscription to advanced features <br> of HP Smart App</li>
+            </ul>
+            <hr>
+            <br>
+            <button class="btn btn-dark" style="border-radius: 0;">Learn</button>
+            <button class="btn btn-dark mt-1" style="border-radius: 0;">Store Locator</button> <br>
+            <button class="btn btn-dark mt-1 mb-3" style="border-radius: 0;">Callback Request</button>
+          </div>
+        </div>
+        </div>
+      </div>
+<br><br><br>
+      <div class="container">
+        <h1>Hey there!</h1>
+        <hr>
+        <h2>What can we help you find today?</h2>
+      </div>
+      
+      <div class="row justify-content-center m-0" >
+        <div class="card rounded-0 gx-0 mx-5 my-3" style="width: 18rem;border:1px solid black;">
+          <img src="https://www.hp.com/content/dam/sites/worldwide/homepage/images/Mask-Group-278@2x.png" class="card-img-top " alt="...">
+          <div class="card-body bg-dark">
+            <a href="#" class="btn btn-dark rounded-0 " style="width: 250px;">Printers</a>
+          </div>
+        </div>
+  
+        <div class="card card mx-5 my-3 rounded-0 gx-0" style="width: 18rem;border:1px solid black;">
+          <img src="https://www.hp.com/content/dam/sites/worldwide/homepage/images/Mask-Group-279@2x.png" class="card-img-top" alt="..." >
+          <div class="card-body bg-dark">
+            <a href="#" class="btn btn-dark rounded-0" style="width: 250px;">PCs</a>
+          </div>
+        </div>
+  
+        <div class="card rounded-0 gx-0 my-3 mx-5" style="width: 18rem;border:1px solid black;">
+          <img src="https://www.hp.com/content/dam/sites/worldwide/homepage/images/Mask-Group-277@2x.png" class="card-img-top" alt="...">
+          <div class="card-body bg-dark">
+            <a href="#" class="btn btn-dark rounded-0" style="width: 250px;">Monitors and Accessories</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+    <footer class="nb-footer bg-dark text-light">
+      <br>
+    <div class="container small">
+    <div class="row">
+
+      <div>
+        <h3 class="d-inline-block">Know exactly what you want? Skip straight to the HP.com store &nbsp;&nbsp;&nbsp;&nbsp;</h3>
+        <button class="btn btn-light rounded-0 px-4 py-1 mt-1 mb-2">Shop</button>
+      </div>
+      <hr>
+      
+      
+
+    <div class="col-md-3 col-sm-6">
+    <div class="footer-info-single">
+      <h6 class="title">About us</h6>
+      <ul class="list-unstyled ">
+        <li><a href="#" class="text-decoration-none text-light" title=""> Contact HP</a></li>
+        <li><a href="#" class="text-decoration-none text-light" title=""> Careers</a></li>
+        <li><a href="#" class="text-decoration-none text-light" title=""> Investor relations</a></li>
+        <li><a href="#" class="text-decoration-none text-light" title=""> Sustainable impact</a></li>
+        <li><a href="#" class="text-decoration-none text-light" title=""> Press center</a></li>
+        <li><a href="#" class="text-decoration-none text-light" title=""> The Garrage</a></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+    <div class="footer-info-single">
+      <h6 class="title">Ways to buy</h6>
+      <ul class="list-unstyled">
+        <li><a href="#" class="text-decoration-none text-light" title=""> shop online</a></li>
+        <li><a href="#" class="text-decoration-none text-light" title=""> HP world:Brand exclusive stores</a></li>
+        <li><a href="#" class="text-decoration-none text-light" title=""> Call an HP rep</a></li>
+        <li><a href="#" class="text-decoration-none text-light" title=""> Find a reseller</a></li>
+        <li><a href="#" class="text-decoration-none text-light" title=""> HP Promotion</a></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+    <div class="footer-info-single">
+      <h6 class="title">Suport</h6>
+      <ul class="list-unstyled">
+        <li><a href="#" class="text-decoration-none text-light" title=""> Download drivers</a></li>
+        <li><a href="#" class="text-decoration-none text-light" title=""> Support & triubleshooting</a></li>
+        <li><a href="#" class="text-decoration-none text-light" title=""> Community</a></li>
+        <li><a href="#" class="text-decoration-none text-light" title=""> Register your product</a></li>
+        <li><a href="#" class="text-decoration-none text-light" title=""> Authorized service providers</a></li>
+        <li><a href="#" class="text-decoration-none text-light" title=""> Chech repair status</a></li>
+        <li><a href="#" class="text-decoration-none text-light" title=""> Training & certification</a></li>
+        <li><a href="#" class="text-decoration-none text-light" title=""> Featured links</a></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+      <div class="footer-info-single">
+        <h6 class="title">HP Partners</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-decoration-none text-light" title=""> HP Amplify Partner Program</a></li>
+          <li><a href="#" class="text-decoration-none text-light" title=""> HP Partner Portal</a></li>
+          <li><a href="#" class="text-decoration-none text-light" title=""> Developers</a></li>
+        </ul>
+      </div>
+      </div>
+
+
+      <div class="social-media">
+        <h6 class="title">Stay connected</h6>
+        <ul class="list-inline">
+          <i class="bi bi-facebook"></i>            
+          <i class="bi bi-twitter mx-2"></i>
+          <i class="bi bi-instagram"></i>
+        </ul>
+      </div>
+
+
+
+    </div>
+    </div>
+<hr class="mx-5">
+    <section class="copyright">
+    <div class="container">
+    <div class="row">
+    <div class="col-sm-6">
+    <p>© Copyright 2023 HP Development Company,L.P.</p>
+    </div>
+    <div class="col-sm-6"></div>
+    </div>
+    </div>
+    </section>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <!-- bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.js"></script>
+</body>
+</html>

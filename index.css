@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: auto;
+}
+.nav-item{
+    margin-left: 10px;
+    font-size: larger;
+}
+.imgg{
+    width:100%;
+}
+
+
+
+
